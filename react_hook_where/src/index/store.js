@@ -6,6 +6,12 @@ import {
 import reduces from './reduce';
 import thunk from 'redux-thunk'
 export default createStore(
-    combineReducers(reduces), {},
+    combineReducers(reduces), {
+        from: '北京',
+        to: '上海',
+        isCitySelectorVisible: false,
+        currentSelectingLeftCity: false,
+
+    },
     applyMiddleware(thunk)
 )
