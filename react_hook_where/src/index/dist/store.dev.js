@@ -17,7 +17,8 @@ var _default = (0, _redux.createStore)((0, _redux.combineReducers)(_reduce["defa
   from: '北京',
   to: '上海',
   isCitySelectorVisible: false,
-  currentSelectingLeftCity: false
+  currentSelectingLeftCity: false //由它决定数据是回显到左边还是右边
+
 }, (0, _redux.applyMiddleware)(_reduxThunk["default"]));
 
 exports["default"] = _default;

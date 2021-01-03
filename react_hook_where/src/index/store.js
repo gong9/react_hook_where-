@@ -10,7 +10,7 @@ export default createStore(
         from: '北京',
         to: '上海',
         isCitySelectorVisible: false,
-        currentSelectingLeftCity: false,
+        currentSelectingLeftCity: false, //由它决定数据是回显到左边还是右边
 
     },
     applyMiddleware(thunk)

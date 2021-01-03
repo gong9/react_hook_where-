@@ -71,6 +71,36 @@ var _default = {
     }
 
     return state;
+  },
+  isLoadingCityData: function isLoadingCityData() {
+    var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : false;
+    var action = arguments.length > 1 ? arguments[1] : undefined;
+    var type = action.type,
+        payload = action.payload;
+
+    switch (type) {
+      case _actions.ACTION_ISLOADCITYSELETOR:
+        return payload;
+        break;
+
+      default:
+    }
+
+    return state;
+  },
+  cityData: function cityData(state, action) {
+    var type = action.type,
+        payload = action.payload;
+
+    switch (type) {
+      case _actions.SETCITYDATA:
+        return payload;
+        break;
+
+      default:
+    }
+
+    return state;
   }
 };
 exports["default"] = _default;

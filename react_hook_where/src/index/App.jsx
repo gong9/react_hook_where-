@@ -6,7 +6,13 @@ import CityCom from './cityCom/'
 import DateCom from './dateCom'
 import HighSpeed from './highspeed'
 import CitySeletor from '../common/citySeletor'
-import { exchangeFromTo, showCitySelector, hideCitySelector } from './actions'
+import {
+  exchangeFromTo,
+  showCitySelector,
+  hideCitySelector,
+  setSeletorCity,
+  setIsLoadCitySeletor
+} from './actions'
 function App(props) {
   const {
     from,
@@ -33,6 +39,7 @@ function App(props) {
       <CitySeletor
         show={isCitySelectorVisible}
         onBack={() => dispatch(hideCitySelector())}
+        onSelect={(city) => setSeletorCity(city)}
       />
       {/* <DateCom />  */}
       {/* <HighSpeed /> */}

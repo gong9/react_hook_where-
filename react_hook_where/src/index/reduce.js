@@ -2,7 +2,9 @@ import {
     ACTION_SET_FROM,
     ACTION_SET_TO,
     ACTION_SET_CURRENT_SELECTING_LEFT_CITY,
-    ACTION_SET_IS_CITY_SELECTOR_VISIBLE
+    ACTION_SET_IS_CITY_SELECTOR_VISIBLE,
+    ACTION_ISLOADCITYSELETOR,
+    SETCITYDATA
 } from './actions';
 export default {
     from(state = '北京', action) {
@@ -63,4 +65,35 @@ export default {
 
         return state;
     },
+    isLoadingCityData(state = false, action) {
+        const {
+            type,
+            payload
+        } = action;
+
+        switch (type) {
+            case ACTION_ISLOADCITYSELETOR:
+                return payload;
+                break;
+
+            default:
+
+        }
+        return state;
+    },
+    cityData(state, action) {
+        const {
+            type,
+            payload
+        } = action;
+
+        switch (type) {
+            case SETCITYDATA:
+                return payload
+                break;
+
+            default:
+        }
+        return state;
+    }
 }
