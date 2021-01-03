@@ -5,24 +5,34 @@ import Header from '../common/header'
 import CityCom from './cityCom/'
 import DateCom from './dateCom'
 import HighSpeed from './highspeed'
-import { exchangeFromTo } from './actions'
+import CitySeletor from '../common/citySeletor'
+import { exchangeFromTo, showCitySelector, hideCitySelector } from './actions'
 function App(props) {
   const {
     from,
     to,
-    dispatch
+    dispatch,
+    isCitySelectorVisible
   } = props
   const onBack = useCallback(() => {
     window.history.back()
   }, [])
   return (
     <div className="App">
-      <Header title="火车票" onBack={onBack} />
-      <CityCom
-        from={from}
-        to={to}
-        // showCitySelector={showCitySelector}
-        exchangeFromTo={() => dispatch(exchangeFromTo())}
+      <div className="header-wrapper">
+        <Header title="火车票" onBack={onBack} />
+      </div>
+      <form action="./query.html" className="form">
+        <CityCom
+          from={from}
+          to={to}
+          showCitySelector={(m) => { dispatch(showCitySelector(m)) }}
+          exchangeFromTo={() => dispatch(exchangeFromTo())}
+        />
+      </form>
+      <CitySeletor
+        show={isCitySelectorVisible}
+        onBack={() => dispatch(hideCitySelector())}
       />
       {/* <DateCom />  */}
       {/* <HighSpeed /> */}

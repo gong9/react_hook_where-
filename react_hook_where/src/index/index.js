@@ -8,7 +8,7 @@ import App from './App.jsx';
 
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+    <App />                                               
   </Provider>
   ,
   document.getElementById('root')

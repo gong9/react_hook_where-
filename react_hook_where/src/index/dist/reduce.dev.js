@@ -65,6 +65,7 @@ var _default = {
     switch (type) {
       case _actions.ACTION_SET_CURRENT_SELECTING_LEFT_CITY:
         return payload;
+        break;
 
       default:
     }

@@ -40,7 +40,7 @@ function hideCitySelector() {
 }
 
 function exchangeFromTo() {
-  return function (getState, dispatch) {
+  return function (dispatch, getState) {
     var _getState = getState(),
         from = _getState.from,
         to = _getState.to;
@@ -51,7 +51,7 @@ function exchangeFromTo() {
 }
 
 function showCitySelector(currentSelectingLeftCity) {
-  return function (getState, dispatch) {
+  return function (dispatch) {
     dispatch({
       type: ACTION_SET_IS_CITY_SELECTOR_VISIBLE,
       payload: true

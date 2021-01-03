@@ -23,7 +23,7 @@ export function hideCitySelector() {
     }
 }
 export function exchangeFromTo() {
-    return (getState, dispatch) => {
+    return (dispatch, getState) => {
         const {
             from,
             to
@@ -34,7 +34,7 @@ export function exchangeFromTo() {
 }
 
 export function showCitySelector(currentSelectingLeftCity) {
-    return (getState, dispatch) => {
+    return (dispatch) => {
         dispatch({
                 type: ACTION_SET_IS_CITY_SELECTOR_VISIBLE,
                 payload: true
