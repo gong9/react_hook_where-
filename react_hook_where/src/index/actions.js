@@ -1,7 +1,3 @@
-import {
-    func
-} from "prop-types"
-
 export const ACTION_SET_FROM = "SET_FROM"
 export const ACTION_SET_TO = "SET_TO"
 export const ACTION_SET_IS_CITY_SELECTOR_VISIBLE = "ACTION_SET_IS_CITY_SELECTOR_VISIBLE"
